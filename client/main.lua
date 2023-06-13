@@ -92,7 +92,7 @@ RegisterNetEvent(
                 function(info)
                     local options = {}
                     for k, v in pairs(info) do
-                        if v.job == PlayerData.job.name  then
+                        if v.dist < Config.Distance and  v.job ~= PlayerJob and PlayerData.citizenid ~= v.citizenid then
                             table.insert(
                                 options,
                                 {
@@ -133,7 +133,7 @@ RegisterNetEvent(
                 function(info)
                     local options = {}
                     for k, v in pairs(info) do
-                        if v.job ~= PlayerJob and PlayerData.identifier ~= v.citizenid then
+                        if v.dist < Config.Distance and  v.job ~= PlayerJob and PlayerData.identifier ~= v.citizenid then
                             table.insert(
                                 options,
                                 {
