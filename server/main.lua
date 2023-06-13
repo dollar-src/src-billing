@@ -74,7 +74,6 @@ lib.callback.register(
                 local targetped = GetPlayerPed(v)
                 local tCoords = GetEntityCoords(targetped)
                 local dist = #(GetEntityCoords(GetPlayerPed(src)) - tCoords)
-                print(json.encode(ped))
                 players[#players + 1] = {
                     id = v,
                     coords = tCoords,
