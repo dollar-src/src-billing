@@ -23,7 +23,6 @@ AddEventHandler(
         Core.PlayerLoaded = true
 
         PlayerData = xPlayer
-        print(json.encode(PlayerData))
         PlayerJob = xPlayer.job.name
         Core.PlayerLoaded = true
     end
@@ -93,7 +92,7 @@ RegisterNetEvent(
                 function(info)
                     local options = {}
                     for k, v in pairs(info) do
-                        if v.job ~= PlayerData.job.name and PlayerData ~= v.citizenid then
+                        if v.job == PlayerData.job.name  then
                             table.insert(
                                 options,
                                 {
@@ -117,7 +116,7 @@ RegisterNetEvent(
                     lib.registerContext(
                         {
                             id = "cu",
-                            title = "Test",
+                            title = "BILLING MENU",
                             options = options
                         }
                     )
@@ -134,7 +133,6 @@ RegisterNetEvent(
                 function(info)
                     local options = {}
                     for k, v in pairs(info) do
-                        print(PlayerData.identifier)
                         if v.job ~= PlayerJob and PlayerData.identifier ~= v.citizenid then
                             table.insert(
                                 options,
@@ -159,7 +157,7 @@ RegisterNetEvent(
                     lib.registerContext(
                         {
                             id = "cu",
-                            title = "Test",
+                            title = "BILLING MENU",
                             options = options
                         }
                     )
@@ -238,7 +236,7 @@ RegisterNetEvent(
             lib.registerContext(
                 {
                     id = "cu",
-                    title = "Test",
+                    title = "BILLING MENU",
                     options = options
                 }
             )
@@ -273,7 +271,7 @@ RegisterNetEvent(
             lib.registerContext(
                 {
                     id = "cu",
-                    title = "Test",
+                    title = "BILLING MENU",
                     options = options
                 }
             )
