@@ -64,7 +64,8 @@ lib.callback.register(
                     citizenid = ped.PlayerData.citizenid,
                     sourceplayer = ped.PlayerData.source,
                     bank = ped.PlayerData.money["bank"],
-                    job = ped.PlayerData.job.name
+                    job = ped.PlayerData.job.name,
+                    dist = dist,
                 }
             end
             return players
@@ -81,7 +82,8 @@ lib.callback.register(
                     citizenid = ped.identifier,
                     sourceplayer = ped.source,
                     bank = ped.bank,
-                    job = ped.job.name
+                    job = ped.job.name,
+                    dist = dist,
                 }
             end
             return players
