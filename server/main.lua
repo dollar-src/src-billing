@@ -113,7 +113,7 @@ RegisterNetEvent(
                 local billAmount = tonumber(data.amount)
                 if bank > billAmount then
                     RemoveMoney(src, "bank", billAmount)
-                    exports["qb-management"]:AddMoney("police", billAmount)
+                    exports["qb-management"]:AddMoney(data.job, billAmount)
                     SendDiscord(data, Config.Webhook.PayBill, 2)
                     for i, fieldData in ipairs(jsonData) do
                         if fieldData.id == nameFromData.id then
