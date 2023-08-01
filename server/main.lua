@@ -58,6 +58,7 @@ lib.callback.register("src-billing:getPlayers", function(_, cb)
             }
         end
     else
+        -- if you are using latest esx (1.9)  Core.GetExtendedPlayers()  use this
         for _, v in pairs(Core.GetPlayers()) do
             local ped = Core.GetPlayerFromId(v)
             local targetped = GetPlayerPed(v)
